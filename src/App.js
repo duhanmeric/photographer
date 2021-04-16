@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { useRef, useEffect } from "react";
+import Works from "./components/Works";
 
 function App() {
   var cursorRef = useRef();
@@ -22,6 +23,7 @@ function App() {
       </div>
       <Header />
       <Hero />
+      <Works />
     </div>
   );
 }
