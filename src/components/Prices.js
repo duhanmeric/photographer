@@ -35,9 +35,9 @@ export default function Prices() {
         MY <span style={{ fontWeight: "bold" }}>PRIZES</span>
       </h1>
       <div className="row mx-auto">
-        <OwlCarousel items={3} className="owl-theme p-0" nav margin={0}>
+        <OwlCarousel items={3} className="owl-theme p-0" dotsEach={true}>
           {images.map((img) => (
-            <div className="col-md-4">
+            <div className="col-md-4" key={img.id}>
               <img src={img.url} alt={img.alt} />
             </div>
           ))}

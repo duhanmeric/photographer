@@ -142,3 +142,7 @@ nav ul li:nth-of-type(2) {
   width: 375px;
   height: 375px;
 }
+
+.owl-dot.active span {
+  background-color: #f8f32b !important;
+}
