@@ -75,7 +75,7 @@ nav ul li:nth-of-type(2) {
 }
 
 .works-section {
-  margin: 50px 0;
+  margin-top: 50px;
   padding: 0px 150px;
 }
 
@@ -130,7 +130,7 @@ nav ul li:nth-of-type(2) {
 }
 
 .prize-section {
-  padding: 0 150px;
+  padding: 5rem 150px;
 }
 
 .prize-title {
@@ -143,6 +143,31 @@ nav ul li:nth-of-type(2) {
   height: 375px;
 }
 
+.owl-dot {
+  margin-top: 10px;
+}
+
 .owl-dot.active span {
   background-color: #f8f32b !important;
+}
+
+.contact-section {
+  padding: 5rem 0;
+}
+
+.contact-title {
+  margin: 0px 0 30px 0;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.contact-link:hover {
+  color: #f8f32b;
+  font-style: italic;
+  text-decoration: underline;
 }

@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import { useRef, useEffect } from "react";
 import Works from "./components/Works";
 import Prices from "./components/Prices";
+import Contact from "./components/Contact";
 
 function App() {
   var cursorRef = useRef();
@@ -26,6 +27,16 @@ function App() {
       <Hero />
       <Works />
       <Prices />
+      <div
+        className="line mx-auto"
+        style={{
+          width: "100%",
+          maxWidth: "calc(100% - 300px)",
+          height: "1px",
+          backgroundColor: "#f8f32b",
+        }}
+      ></div>
+      <Contact />
     </div>
   );
 }
