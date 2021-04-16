@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { useRef, useEffect } from "react";
 import Works from "./components/Works";
+import Prices from "./components/Prices";
 
 function App() {
   var cursorRef = useRef();
@@ -24,6 +25,7 @@ function App() {
       <Header />
       <Hero />
       <Works />
+      <Prices />
     </div>
   );
 }
