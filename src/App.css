@@ -152,7 +152,7 @@ nav ul li:nth-of-type(2) {
 }
 
 .contact-section {
-  padding: 5rem 0;
+  padding: 5rem 0 4rem 0;
 }
 
 .contact-title {
@@ -170,4 +170,50 @@ nav ul li:nth-of-type(2) {
   color: #f8f32b;
   font-style: italic;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+
+  .enthusiast {
+    font-size: 32px;
+  }
+
+  .works-section,
+  .prize-section,
+  .hero-video {
+    padding: 0 20px;
+  }
+
+  .works-title {
+    margin-bottom: 30px;
+  }
+
+  .works-section .col-md-5 {
+    margin-top: 30px !important;
+  }
+
+  .works-section .col-md-5:nth-of-type(1) {
+    margin-top: 0px !important;
+  }
+
+  .prize-section {
+    margin: 50px 0;
+  }
+
+  .line {
+    max-width: 100% !important;
+  }
+
+  .contact-section {
+    padding-bottom: 3rem;
+  }
+
+  .pop-up {
+    font-size: 24px;
+    width: 50%;
+    text-align: center;
+  }
 }

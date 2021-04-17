@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { useRef, useEffect } from "react";
 import Works from "./components/Works";
-import Prices from "./components/Prices";
+import Prizes from "./components/Prizes";
 import Contact from "./components/Contact";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <Header />
       <Hero />
       <Works />
-      <Prices />
+      <Prizes />
       <div
         className="line mx-auto"
         style={{

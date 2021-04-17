@@ -24,9 +24,12 @@ export default function Contact() {
           Pinterest
         </a>
       </div>
-      <div className="coder text-center text-white mt-5">
-        <span style={{ fontStyle: "italic" }}>Designed</span> and
-        <code style={{ fontSize: "16px" }}> Coded</code> with ❤️ by duhanmeric
+      <div
+        className="coder text-center text-white mt-5"
+        style={{ fontSize: "14px" }}
+      >
+        <span style={{ fontStyle: "italic" }}>Designed</span> and Coded with ❤️
+        by duhanmeric
       </div>
     </section>
   );
