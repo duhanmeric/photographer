@@ -9,8 +9,7 @@ import prize3 from "../assets/img/prize3.jpg";
 export default function Prizes() {
   var options = {
     loop: false,
-    margin: 100,
-    nav: true,
+    margin: 10,
     responsive: {
       320: {
         items: 1,

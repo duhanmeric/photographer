@@ -216,4 +216,10 @@ nav ul li:nth-of-type(2) {
     width: 50%;
     text-align: center;
   }
+
+  .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
