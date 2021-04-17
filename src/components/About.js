@@ -13,8 +13,8 @@ export default function About() {
       <img
         src={about}
         alt="about"
-        width="250"
-        height="250"
+        width="300"
+        height="300"
         className="my-5"
         style={{ borderRadius: "50%", objectFit: "cover" }}
       />
