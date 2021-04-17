@@ -1,10 +1,9 @@
 import "./App.css";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import { useRef, useEffect } from "react";
-import Works from "./components/Works";
-import Prizes from "./components/Prizes";
-import Contact from "./components/Contact";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
   var cursorRef = useRef();
@@ -19,25 +18,18 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div id="cursor" ref={cursorRef}>
-        <div id="innerCursor"></div>
+    <Router>
+      <div className="App">
+        <div id="cursor" ref={cursorRef}>
+          <div id="innerCursor"></div>
+        </div>
+        <Header />
+        <Switch>
+          <Route component={Home} exact path="/" />
+          <Route component={About} exact path="/about" />
+        </Switch>
       </div>
-      <Header />
-      <Hero />
-      <Works />
-      <Prizes />
-      <div
-        className="line mx-auto"
-        style={{
-          width: "100%",
-          maxWidth: "calc(100% - 300px)",
-          height: "1px",
-          backgroundColor: "#f8f32b",
-        }}
-      ></div>
-      <Contact />
-    </div>
+    </Router>
   );
 }
 
