@@ -174,12 +174,14 @@ nav ul li:nth-of-type(2) {
   text-decoration: underline;
 }
 
-.img-col:nth-of-type(2n + 1) {
-  padding-left: 0;
-}
+@media screen and (min-width: 576px) {
+  .img-col:nth-of-type(2n + 1) {
+    padding-left: 0;
+  }
 
-.img-col:nth-of-type(2n) {
-  padding-right: 0;
+  .img-col:nth-of-type(2n) {
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -200,13 +202,9 @@ nav ul li:nth-of-type(2) {
   .hero-video {
     padding: 0 20px;
   }
-
-  /* .contact-section {
-    padding: 3rem 0 2rem 0;
-  } */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   header {
     padding: 20px 40px;
   }

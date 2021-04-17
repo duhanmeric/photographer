@@ -18,8 +18,13 @@ export default function Prizes() {
         items: 2,
         margin: 20,
       },
-      1000: {
+      768: {
+        items: 2,
+        margin: 80,
+      },
+      1440: {
         items: 3,
+        margin: 10,
       },
     },
   };
