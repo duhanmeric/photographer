@@ -154,7 +154,7 @@ nav ul li:nth-of-type(2) {
 }
 
 .contact-section {
-  padding: 5rem 0 4rem 0;
+  padding: 3rem 0 2rem 0;
 }
 
 .contact-title {
@@ -201,9 +201,9 @@ nav ul li:nth-of-type(2) {
     padding: 0 20px;
   }
 
-  .contact-section {
-    padding-bottom: 3rem;
-  }
+  /* .contact-section {
+    padding: 3rem 0 2rem 0;
+  } */
 }
 
 @media screen and (max-width: 768px) {
