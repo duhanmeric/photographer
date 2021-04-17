@@ -4,7 +4,7 @@ export default function Contact() {
       <h1 className="contact-title text-center text-white">
         GET IN <span style={{ fontWeight: "bold" }}>TOUCH</span>
       </h1>
-      <div className="container w-50 d-flex justify-content-around flex-wrap">
+      <div className="container w-50 d-flex justify-content-around flex-wrap flex-column text-center">
         <a href="#" className="contact-link">
           Email
         </a>

@@ -11,8 +11,12 @@ export default function Prizes() {
     loop: false,
     margin: 10,
     responsive: {
-      320: {
+      0: {
         items: 1,
+      },
+      576: {
+        items: 2,
+        margin: 20,
       },
       1000: {
         items: 3,

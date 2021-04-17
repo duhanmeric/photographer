@@ -34,27 +34,8 @@ export default function Works() {
       </h1>
       <div className="row mx-auto justify-content-between">
         {images.map((img) => (
-          <div
-            key={img.id}
-            className="col-md-5"
-            style={{
-              padding: "0",
-              width: "100%",
-              height: "100%",
-              maxWidth: "550px",
-              maxHeight: "650px",
-            }}
-          >
-            <img
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: "550px",
-                maxHeight: "650px",
-              }}
-              src={img.url}
-              alt={img.alt}
-            />
+          <div key={img.id} className="col-md-6 col-sm-6 img-col">
+            <img src={img.url} alt={img.alt} />
             <div className="pop-up">See the Album</div>
           </div>
         ))}
