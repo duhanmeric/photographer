@@ -1,6 +1,5 @@
 import Hero from "./Hero";
 import Works from "./Works";
-import Prizes from "./Prizes";
 import Contact from "./Contact";
 
 export default function Home() {
@@ -8,7 +7,6 @@ export default function Home() {
     <>
       <Hero />
       <Works />
-      <Prizes />
       <div
         className="line mx-auto"
         style={{
@@ -16,6 +14,7 @@ export default function Home() {
           maxWidth: "calc(100% - 300px)",
           height: "1px",
           backgroundColor: "#f8f32b",
+          marginTop: "50px",
         }}
       ></div>
       <Contact />
