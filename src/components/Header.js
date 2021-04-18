@@ -25,13 +25,40 @@ export default function Header() {
       <nav ref={nav}>
         <ul className="list-unstyled">
           <li>
-            <Link to="/">Work</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                if (nav.current.classList.contains("active")) {
+                  nav.current.classList.remove("active");
+                }
+              }}
+            >
+              Work
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link
+              to="/about"
+              onClick={() => {
+                if (nav.current.classList.contains("active")) {
+                  nav.current.classList.remove("active");
+                }
+              }}
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/playlist">Playlist</Link>
+            <Link
+              to="/playlist"
+              onClick={() => {
+                if (nav.current.classList.contains("active")) {
+                  nav.current.classList.remove("active");
+                }
+              }}
+            >
+              Playlist
+            </Link>
           </li>
         </ul>
       </nav>

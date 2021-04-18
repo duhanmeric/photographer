@@ -147,25 +147,11 @@ header a:hover {
 }
 
 .prize-section {
-  padding: 5rem 150px;
+  padding: 7rem 150px;
 }
 
 .prize-title {
   margin-bottom: 50px;
-}
-
-.prize-section .col-md-4 {
-  background-color: gray;
-  width: 375px;
-  height: 375px;
-}
-
-.owl-dot {
-  margin-top: 10px;
-}
-
-.owl-dot.active span {
-  background-color: #f8f32b !important;
 }
 
 .contact-section {
@@ -197,6 +183,7 @@ header a:hover {
   align-items: center;
   padding-bottom: 86px;
   position: relative;
+  margin-top: 66.4px;
 }
 
 .top-left-frame {
@@ -271,8 +258,7 @@ header a:hover {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 20px 40px;
-    background-color: #212121;
+    padding: 20px;
   }
 
   nav {
@@ -325,7 +311,8 @@ header a:hover {
 }
 
 @media screen and (min-width: 768px) {
-  .hero-section {
+  .hero-section,
+  .about-section {
     margin-top: 86.4px;
   }
 
@@ -334,12 +321,13 @@ header a:hover {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   header {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 20px;
   }
+}
 
+@media screen and (max-width: 1024px) {
   .works-section,
   .prize-section,
   .hero-video {
