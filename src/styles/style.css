@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  height: 2100px;
+}
+
+header {
+  max-height: 100px;
+  height: 100%;
+  padding: 0 100px;
+  background-color: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.sticky {
+  max-height: 70px;
+  border-bottom: 1px solid #ccc;
+}
+
+header #logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 4px solid #000;
+  position: relative;
+}
+
+header #logo p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+header nav ul li:nth-of-type(2) {
+  margin: 0 60px;
+}
+
+header nav ul a {
+  display: block;
+  text-decoration: none;
+  margin-top: 4px;
+  color: #000;
+  font-weight: bold;
+  height: 100%;
+}
+
+header nav ul a:hover {
+  color: #000;
+}
+
+header nav ul a:hover::after {
+  width: 100%;
+}
+
+header nav ul a::after {
+  content: "";
+  width: 0%;
+  height: 4px;
+  display: block;
+  background-color: #dd2121;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+/*# sourceMappingURL=style.css.map */

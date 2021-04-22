@@ -1,64 +1,30 @@
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 export default function Header() {
-  const nav = useRef();
+  const headerRef = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      headerRef.current.classList.toggle("sticky", window.scrollY > 0);
+    });
+  }, []);
 
   return (
-    <header className="fixed-top">
-      <div className="author">
-        <Link to="/">JOHN DOE</Link>
+    <header className="fixed-top" ref={headerRef}>
+      <div id="logo">
+        <img src="#" alt="" />
+        <p className="mb-0">J&D</p>
       </div>
-      <div
-        className="bar"
-        onClick={() => {
-          nav.current.classList.toggle("active");
-          if (nav.current.classList.contains("active")) {
-            document.body.classList.add("closeFlow");
-          } else {
-            document.body.classList.remove("closeFlow");
-          }
-        }}
-      >
-        <i className="fas fa-bars"></i>
-      </div>
-      <nav ref={nav}>
-        <ul className="list-unstyled">
+      <nav>
+        <ul className="list-unstyled mb-0">
           <li>
-            <Link
-              to="/"
-              onClick={() => {
-                if (nav.current.classList.contains("active")) {
-                  nav.current.classList.remove("active");
-                }
-              }}
-            >
-              Work
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link
-              to="/about"
-              onClick={() => {
-                if (nav.current.classList.contains("active")) {
-                  nav.current.classList.remove("active");
-                }
-              }}
-            >
-              About
-            </Link>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <Link
-              to="/playlist"
-              onClick={() => {
-                if (nav.current.classList.contains("active")) {
-                  nav.current.classList.remove("active");
-                }
-              }}
-            >
-              Playlist
-            </Link>
+            <Link to="/">Contact</Link>
           </li>
         </ul>
       </nav>
