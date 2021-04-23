@@ -17,7 +17,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
     color: $secondary;
   }
   .img-wrapper {
@@ -46,8 +45,7 @@
         }
       }
     }
-    &:hover .pop-up,
-    &:hover .work-title {
+    &:hover .pop-up {
       visibility: visible;
       opacity: 1;
     }
@@ -58,6 +56,11 @@
   }
   .row:nth-of-type(2n + 1) {
     padding-left: 0 !important;
+  }
+  .row:hover .work-title {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.1s ease;
   }
   .work-img {
     width: 500px;

@@ -436,8 +436,6 @@ header nav ul a::after {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   color: #000;
 }
 
@@ -486,8 +484,7 @@ header nav ul a::after {
   margin-left: 20px;
 }
 
-.work-section .img-wrapper:hover .pop-up,
-.work-section .img-wrapper:hover .work-title {
+.work-section .img-wrapper:hover .pop-up {
   visibility: visible;
   opacity: 1;
 }
@@ -501,6 +498,13 @@ header nav ul a::after {
 
 .work-section .row:nth-of-type(2n + 1) {
   padding-left: 0 !important;
+}
+
+.work-section .row:hover .work-title {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 
 .work-section .work-img {
