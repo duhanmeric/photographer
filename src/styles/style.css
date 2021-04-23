@@ -416,11 +416,105 @@ header nav ul a::after {
   }
 }
 
+.work-section {
+  padding: 0 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.work-section .work-section-title {
+  margin: 100px 0;
+}
+
+.work-section .work-title {
+  visibility: hidden;
+  opacity: 0;
+  width: auto;
+  font-size: 48px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.work-section .img-wrapper {
+  width: auto;
+  padding: 0 !important;
+  position: relative;
+  cursor: pointer;
+}
+
+.work-section .img-wrapper a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-decoration: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.work-section .img-wrapper a .pop-up {
+  visibility: hidden;
+  opacity: 0;
+  width: 300px;
+  height: 100px;
+  background-color: #dd2121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 32px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.work-section .img-wrapper a .pop-up .album-text {
+  margin-left: 20px;
+}
+
+.work-section .img-wrapper:hover .pop-up,
+.work-section .img-wrapper:hover .work-title {
+  visibility: visible;
+  opacity: 1;
+}
+
+.work-section .row:nth-of-type(2n) {
+  padding-right: 0 !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.work-section .row:nth-of-type(2n + 1) {
+  padding-left: 0 !important;
+}
+
+.work-section .work-img {
+  width: 500px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 * {
   font-family: "Space Mono", monospace;
 }
 
 body {
-  height: 2000px;
+  height: 3000px;
 }
 /*# sourceMappingURL=style.css.map */
