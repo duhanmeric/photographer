@@ -32,6 +32,7 @@ header #logo {
   border-radius: 50%;
   border: 4px solid #000;
   position: relative;
+  color: #000;
 }
 
 header #logo p {
@@ -108,10 +109,13 @@ header nav ul a::after {
   transition: width 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   header {
-    padding: 0 40px;
+    padding: 0 20px !important;
   }
+}
+
+@media screen and (max-width: 768px) {
   header #logo {
     height: 45px;
     width: 45px;
@@ -189,6 +193,12 @@ header nav ul a::after {
   header.sticky nav {
     top: 72px;
     height: calc(100vh - 70px);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  header {
+    padding: 0 40px;
   }
 }
 
@@ -294,6 +304,116 @@ header nav ul a::after {
 
 .hero-section .hero-info {
   font-size: 24px;
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section .top-left-frame {
+    left: 20px !important;
+  }
+  .hero-section .bottom-right-frame {
+    right: 20px !important;
+  }
+  .hero-section .hero-info {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .hero-section .recording {
+    left: 40px !important;
+    top: 16px !important;
+  }
+  .hero-section .timer {
+    position: absolute;
+    right: 0 !important;
+    bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 20px;
+  }
+  .hero-section .top-left-frame {
+    left: 40px;
+  }
+  .hero-section .top-left-frame .first-frame {
+    width: 150px;
+    height: 2px;
+  }
+  .hero-section .top-left-frame .second-frame {
+    width: 2px;
+    height: 150px;
+  }
+  .hero-section .bottom-right-frame {
+    right: 40px;
+  }
+  .hero-section .bottom-right-frame .first-frame {
+    width: 150px;
+    height: 2px;
+  }
+  .hero-section .bottom-right-frame .second-frame {
+    width: 2px;
+    height: 150px;
+  }
+  .hero-section .timer {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 20px;
+  }
+  .hero-section .recording {
+    left: 70px;
+    top: 20px;
+  }
+  .hero-section .recording .ball {
+    width: 20px;
+    height: 20px;
+  }
+  .hero-section .recording .rec-text {
+    font-size: 20px;
+  }
+  .hero-section .p-img {
+    width: 200px;
+    height: 200px;
+    margin: 30px 0;
+  }
+  .hero-section .hero-info,
+  .hero-section .photographer-name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-section {
+    padding: 5rem 40px !important;
+  }
+  .hero-section .top-left-frame {
+    left: 40px !important;
+  }
+  .hero-section .top-left-frame .first-frame {
+    width: 250px;
+  }
+  .hero-section .top-left-frame .second-frame {
+    height: 250px;
+  }
+  .hero-section .bottom-right-frame {
+    right: 40px !important;
+  }
+  .hero-section .bottom-right-frame .first-frame {
+    width: 250px;
+  }
+  .hero-section .bottom-right-frame .second-frame {
+    height: 250px;
+  }
+  .hero-section .recording {
+    left: 80px !important;
+    top: 30px !important;
+  }
+  .hero-section .timer {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+  }
 }
 
 * {

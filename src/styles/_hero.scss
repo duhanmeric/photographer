@@ -79,3 +79,116 @@
     font-size: 24px;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .hero-section {
+    // padding: 5rem 20px !important;
+    .top-left-frame {
+      left: 20px !important;
+    }
+    .bottom-right-frame {
+      right: 20px !important;
+    }
+    .hero-info {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .recording {
+      left: 40px !important;
+      top: 16px !important;
+    }
+    .timer {
+      position: absolute;
+      right: 0 !important;
+      bottom: 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 20px;
+    .top-left-frame {
+      left: 40px;
+      .first-frame {
+        width: 150px;
+        height: 2px;
+      }
+      .second-frame {
+        width: 2px;
+        height: 150px;
+      }
+    }
+    .bottom-right-frame {
+      right: 40px;
+      .first-frame {
+        width: 150px;
+        height: 2px;
+      }
+      .second-frame {
+        width: 2px;
+        height: 150px;
+      }
+    }
+    .timer {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 20px;
+    }
+    .recording {
+      left: 70px;
+      top: 20px;
+      .ball {
+        width: 20px;
+        height: 20px;
+      }
+      .rec-text {
+        font-size: 20px;
+      }
+    }
+    .p-img {
+      width: 200px;
+      height: 200px;
+      margin: 30px 0;
+    }
+    .hero-info,
+    .photographer-name {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero-section {
+    padding: 5rem 40px !important;
+    .top-left-frame {
+      left: 40px !important;
+      .first-frame {
+        width: 250px;
+      }
+      .second-frame {
+        height: 250px;
+      }
+    }
+    .bottom-right-frame {
+      right: 40px !important;
+      .first-frame {
+        width: 250px;
+      }
+      .second-frame {
+        height: 250px;
+      }
+    }
+    .recording {
+      left: 80px !important;
+      top: 30px !important;
+    }
+    .timer {
+      position: absolute;
+      right: 30px;
+      bottom: 20px;
+    }
+  }
+}

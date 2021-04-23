@@ -21,10 +21,10 @@ export default function Header() {
 
   return (
     <header className="fixed-top" ref={headerRef}>
-      <div id="logo">
-        <img src="#" alt="" />
+      <Link to="/" id="logo">
         <p className="mb-0">J&D</p>
-      </div>
+      </Link>
+
       <div className="bar" onClick={() => handleNav()}>
         <div className="first-line" ref={firstLine}></div>
         <div className="second-line" ref={secondLine}></div>
