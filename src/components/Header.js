@@ -3,11 +3,22 @@ import { useRef, useEffect } from "react";
 
 export default function Header() {
   const headerRef = useRef();
+  const navRef = useRef();
+  const firstLine = useRef();
+  const secondLine = useRef();
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       headerRef.current.classList.toggle("sticky", window.scrollY > 0);
     });
+    console.log("xd");
   }, []);
+
+  const handleNav = () => {
+    navRef.current.classList.toggle("opened");
+    firstLine.current.classList.toggle("f-rotated");
+    secondLine.current.classList.toggle("s-rotated");
+  };
 
   return (
     <header className="fixed-top" ref={headerRef}>
@@ -15,16 +26,20 @@ export default function Header() {
         <img src="#" alt="" />
         <p className="mb-0">J&D</p>
       </div>
-      <nav>
-        <ul className="list-unstyled mb-0">
+      <div className="bar" onClick={() => handleNav()}>
+        <div className="first-line" ref={firstLine}></div>
+        <div className="second-line" ref={secondLine}></div>
+      </div>
+      <nav ref={navRef}>
+        <ul className="list-unstyled">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
