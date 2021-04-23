@@ -11,7 +11,6 @@ export default function Header() {
     window.addEventListener("scroll", () => {
       headerRef.current.classList.toggle("sticky", window.scrollY > 0);
     });
-    console.log("xd");
   }, []);
 
   const handleNav = () => {

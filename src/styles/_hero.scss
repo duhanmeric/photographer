@@ -1,0 +1,81 @@
+@import "./variables";
+@import "./func";
+
+.hero-section {
+  margin-top: 110px;
+  padding: $defaultPadding;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  .top-left-frame {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    .first-frame {
+      width: 300px;
+      height: 2px;
+      background-color: $secondary;
+    }
+    .second-frame {
+      width: 2px;
+      height: 300px;
+      background-color: $secondary;
+    }
+  }
+  .recording {
+    position: absolute;
+    left: 150px;
+    top: 50px;
+    @include flexItems(row, center);
+
+    .ball {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $primary;
+      margin-right: 10px;
+    }
+    .rec-text {
+      font-size: 24px;
+      color: $primary;
+    }
+  }
+  .timer {
+    font-weight: bold;
+    text-align: right;
+    margin-right: 50px;
+    font-size: 24px;
+  }
+  .bottom-right-frame {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    .first-frame {
+      width: 300px;
+      height: 2px;
+      background-color: $secondary;
+    }
+    .second-frame {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 2px;
+      height: 300px;
+      background-color: $secondary;
+    }
+  }
+  .photographer-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .p-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 40px 0;
+  }
+  .hero-info {
+    font-size: 24px;
+  }
+}

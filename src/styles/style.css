@@ -192,7 +192,115 @@ header nav ul a::after {
   }
 }
 
+.hero-section {
+  margin-top: 110px;
+  padding: 0 100px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.hero-section .top-left-frame {
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.hero-section .top-left-frame .first-frame {
+  width: 300px;
+  height: 2px;
+  background-color: #000;
+}
+
+.hero-section .top-left-frame .second-frame {
+  width: 2px;
+  height: 300px;
+  background-color: #000;
+}
+
+.hero-section .recording {
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-section .recording .ball {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #dd2121;
+  margin-right: 10px;
+}
+
+.hero-section .recording .rec-text {
+  font-size: 24px;
+  color: #dd2121;
+}
+
+.hero-section .timer {
+  font-weight: bold;
+  text-align: right;
+  margin-right: 50px;
+  font-size: 24px;
+}
+
+.hero-section .bottom-right-frame {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+}
+
+.hero-section .bottom-right-frame .first-frame {
+  width: 300px;
+  height: 2px;
+  background-color: #000;
+}
+
+.hero-section .bottom-right-frame .second-frame {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 300px;
+  background-color: #000;
+}
+
+.hero-section .photographer-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hero-section .p-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 40px 0;
+}
+
+.hero-section .hero-info {
+  font-size: 24px;
+}
+
 * {
   font-family: "Space Mono", monospace;
+}
+
+body {
+  height: 2000px;
 }
 /*# sourceMappingURL=style.css.map */

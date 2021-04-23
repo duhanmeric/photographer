@@ -3,7 +3,7 @@
 header {
   max-height: 100px;
   height: 100%;
-  padding: 0 100px;
+  padding: $defaultPadding;
   background-color: $third;
   transition: all 0.4s ease;
   @include flexItems(row, space-between);

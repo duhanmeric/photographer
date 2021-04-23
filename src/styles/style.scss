@@ -1,12 +1,13 @@
 @import "./variables";
 @import "./header";
 @import "./media";
+@import "./hero";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 * {
   font-family: "Space Mono", monospace;
 }
 
-// body {
-//   height: 2100px;
-// }
+body {
+  height: 2000px;
+}
