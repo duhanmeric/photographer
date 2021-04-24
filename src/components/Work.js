@@ -8,7 +8,7 @@ export default function Works() {
   const works = [
     {
       id: 0,
-      title: "Pinky Girl",
+      title: "Pinky",
       url: pink,
       album: "#",
     },
@@ -37,21 +37,18 @@ export default function Works() {
         SELECTED <span style={{ fontWeight: "bold" }}>WORKS</span>
       </h1>
       {works.map((work) => (
-        <div className="row mx-auto" key={work.id}>
+        <div className="row mx-auto p-0" key={work.id}>
           <div className="img-wrapper">
-            <Link to={work.album}>
-              <div className="pop-up">
-                SEE THE
-                <span></span>
-                <span className="album-text" style={{ fontWeight: "bold" }}>
-                  ALBUM
-                </span>
-              </div>
+            <Link to={work.album} className="pop-up">
+              SEE THE
+              <span></span>
+              <span className="album-text" style={{ fontWeight: "bold" }}>
+                ALBUM
+              </span>
             </Link>
-
             <img src={work.url} alt={work.title} className="work-img" />
-            <div className="work-title">{work.title}</div>
           </div>
+          <div className="work-title">{work.title}</div>
         </div>
       ))}
     </section>

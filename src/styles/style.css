@@ -426,41 +426,30 @@ header nav ul a::after {
   margin: 100px 0;
 }
 
-.work-section .work-title {
-  visibility: hidden;
-  opacity: 0;
-  width: auto;
-  font-size: 48px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #000;
-}
-
 .work-section .img-wrapper {
   width: auto;
   padding: 0 !important;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
 .work-section .img-wrapper a {
+  visibility: hidden;
   position: absolute;
   left: 50%;
   top: 50%;
   text-decoration: none;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.work-section .img-wrapper a .pop-up {
-  visibility: hidden;
-  opacity: 0;
   width: 300px;
   height: 100px;
   background-color: #dd2121;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,37 +463,51 @@ header nav ul a::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
   font-size: 32px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 
-.work-section .img-wrapper a .pop-up .album-text {
+.work-section .img-wrapper a .album-text {
   margin-left: 20px;
+}
+
+.work-section .img-wrapper:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .work-section .img-wrapper:hover .pop-up {
   visibility: visible;
-  opacity: 1;
+  z-index: 999;
+}
+
+.work-section .img-wrapper:hover .work-img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.work-section .row {
+  position: relative;
+}
+
+.work-section .row:not(:nth-of-type(1)) {
+  margin-top: 50px;
+}
+
+.work-section .work-title {
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #000;
 }
 
 .work-section .row:nth-of-type(2n) {
-  padding-right: 0 !important;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-.work-section .row:nth-of-type(2n + 1) {
-  padding-left: 0 !important;
-}
-
-.work-section .row:hover .work-title {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
 }
 
 .work-section .work-img {
@@ -512,13 +515,67 @@ header nav ul a::after {
   height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+@media screen and (max-width: 576px) {
+  .work-section {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  .work-section .row {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-section {
+    padding: 0 40px;
+    padding-bottom: 2rem;
+  }
+  .work-section .work-section-title {
+    margin: 100px 0 50px 0 !important;
+  }
+  .work-section .row:not(:nth-of-type(1)) {
+    margin-top: 30px;
+  }
+  .work-section .work-title {
+    display: none;
+  }
+  .work-section .work-img {
+    height: 400px;
+  }
+  .work-section .pop-up {
+    font-size: 24px !important;
+    width: 220px !important;
+    height: 75px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .work-section {
+    padding: 0rem 40px !important;
+  }
+  .work-section .work-section-title {
+    margin-bottom: 75px !important;
+  }
+  .work-section .row:not(:nth-of-type(1)) {
+    margin-top: 75px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .work-title {
+    display: none;
+  }
 }
 
 * {
   font-family: "Space Mono", monospace;
-}
-
-body {
-  height: 3000px;
 }
 /*# sourceMappingURL=style.css.map */
