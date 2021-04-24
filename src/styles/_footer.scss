@@ -1,0 +1,24 @@
+@import "./func";
+
+footer {
+  background-color: $secondary;
+  height: 200px;
+  width: 100%;
+  @include flexItems(column, center);
+  .copyright {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .author {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .copyright,
+  .author {
+    width: 75%;
+  }
+}
