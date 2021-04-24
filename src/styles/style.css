@@ -614,6 +614,54 @@ footer .author {
   }
 }
 
+.about-select {
+  margin-top: 110px;
+  margin-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-select .select-btn {
+  border: none;
+  background-color: transparent;
+  border: 1px solid #dd2121;
+  padding: 0 !important;
+  width: 100%;
+  max-width: 150px;
+  height: 50px;
+  font-size: 18px;
+  outline: none;
+}
+
+.about-select .select-btn:nth-of-type(1) {
+  margin-right: 80px;
+}
+
+.about-select .select-btn.active {
+  background-color: #dd2121;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .about-select {
+    padding: 0 20px;
+  }
+  .about-select .select-btn:nth-of-type(1) {
+    margin-right: 40px;
+  }
+}
+
 * {
   font-family: "Space Mono", monospace;
 }
