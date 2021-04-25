@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./views/Home";
 import Footer from "./components/Footer";
 import About from "./views/About";
+import Contact from "./views/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
         </Switch>
         <Footer />
       </div>

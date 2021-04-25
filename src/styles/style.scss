@@ -4,8 +4,17 @@
 @import "./work";
 @import "./footer";
 @import "./about";
+@import "./contact";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 * {
   font-family: "Space Mono", monospace;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
 }

@@ -1,0 +1,150 @@
+@import "./func";
+
+.contact-section {
+  margin: 110px 0 250px 0;
+  padding: $defaultPadding;
+  position: relative;
+  @include flexItems(row, center);
+  .contact-title {
+    position: absolute;
+    left: 25%;
+    top: 20px;
+    transform: translateX(-25%);
+    z-index: 999;
+    font-size: 52px;
+  }
+  .wrapper {
+    width: 350px;
+    height: 450px;
+    position: relative;
+    .img-container {
+      img {
+        width: 350px;
+        height: 450px;
+        object-fit: cover;
+      }
+    }
+    .phone-container,
+    .email-container,
+    .address-container {
+      width: 330px;
+      height: 50px;
+      background-color: $primary;
+    }
+    .email-container {
+      position: absolute;
+      top: 50%;
+      left: -85%;
+      .email {
+        position: relative;
+        height: 100%;
+        a {
+          position: absolute;
+          right: -10%;
+          font-size: 32px;
+          text-decoration: none;
+          color: $third;
+        }
+      }
+    }
+    .phone-container {
+      position: absolute;
+      top: 25%;
+      right: -85%;
+      .phone {
+        position: relative;
+        height: 100%;
+        p {
+          position: absolute;
+          left: -10%;
+          font-size: 32px;
+          text-decoration: none;
+          color: $third;
+        }
+      }
+    }
+    .address-container {
+      position: absolute;
+      bottom: -4%;
+      right: -40%;
+      width: 400px;
+      .address {
+        position: relative;
+        height: 100%;
+        p {
+          position: absolute;
+          left: 5%;
+          font-size: 32px;
+          text-decoration: none;
+          color: $third;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 0 20px !important;
+    margin-bottom: 75px;
+  }
+
+  .info {
+    margin-top: 20px;
+  }
+
+  .phone-container {
+    position: static !important;
+    max-width: 350px !important;
+    width: 100% !important;
+    p {
+      position: static !important;
+      text-align: center;
+    }
+  }
+  .email-container {
+    position: static !important;
+    max-width: 350px !important;
+    width: 100% !important;
+    text-align: center;
+    a {
+      position: static !important;
+    }
+  }
+  .address-container {
+    position: static !important;
+    max-width: 350px !important;
+    max-height: 240px !important;
+    height: 100% !important;
+    width: 100% !important;
+    p {
+      position: static !important;
+      text-align: center;
+      span {
+        color: $third !important;
+      }
+    }
+  }
+
+  .contact-title {
+    position: static !important;
+    transform: none !important;
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+  }
+  .wrapper {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+    .img-container {
+      img {
+        max-width: 350px !important;
+        max-height: 450px !important;
+        width: 100% !important;
+        object-fit: cover;
+      }
+    }
+  }
+}
