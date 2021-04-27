@@ -98,9 +98,13 @@
     position: static !important;
     max-width: 350px !important;
     width: 100% !important;
-    p {
-      position: static !important;
-      text-align: center;
+    .phone {
+      @include flexItems(row, center);
+      p {
+        position: static !important;
+        text-align: center;
+        font-size: 28px !important;
+      }
     }
   }
   .email-container {
@@ -108,8 +112,12 @@
     max-width: 350px !important;
     width: 100% !important;
     text-align: center;
-    a {
-      position: static !important;
+    .email {
+      @include flexItems(row, center);
+      a {
+        position: static !important;
+        font-size: 28px !important;
+      }
     }
   }
   .address-container {
@@ -146,5 +154,12 @@
         object-fit: cover;
       }
     }
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .contact-section {
+    height: 100vh;
+    margin-bottom: 0;
   }
 }

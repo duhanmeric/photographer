@@ -1,0 +1,134 @@
+@import "./func";
+
+$maxWidth: 700px;
+$maxHeigth: 550px;
+
+.album-section {
+  margin-top: 100px;
+  padding: $defaultPadding;
+  height: 100%;
+}
+
+.album-content {
+  height: 100%;
+  position: relative;
+  padding-bottom: 3rem;
+  @include flexItems(row, space-between);
+}
+
+.prev i,
+.next i {
+  font-size: 52px;
+  color: $secondary;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  margin-bottom: 132px;
+}
+
+.album-wrapper {
+  max-width: $maxWidth;
+  max-height: $maxHeigth;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: $maxWidth;
+    max-height: $maxHeigth;
+    object-fit: cover;
+    transition: all 1s ease;
+    &.queue {
+      visibility: hidden;
+      z-index: 1;
+      transform: translateX(-120%);
+      position: absolute;
+    }
+  }
+}
+
+.index {
+  position: absolute;
+  right: 0;
+  bottom: 150px;
+  font-size: 52px;
+  .showing {
+    color: $primary;
+  }
+  .allImageLength {
+    font-size: 42px;
+  }
+}
+
+.album-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+  .album-section {
+    padding: 0 20px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .album-section {
+    padding: 0 40px;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 3;
+    margin-bottom: 0;
+    & i {
+      font-size: 42px;
+    }
+  }
+
+  .prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .album-content {
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  .index {
+    display: none;
+  }
+
+  .album-wrapper {
+    max-height: 500px;
+    height: 100%;
+    img {
+      max-height: 500px;
+      height: 100%;
+      position: absolute;
+      &.queue {
+        visibility: hidden;
+        z-index: 1;
+        transform: translateX(-120%);
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import Home from "./views/Home";
 import Footer from "./components/Footer";
 import About from "./views/About";
 import Contact from "./views/Contact";
+import Album from "./views/Album";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/:id" exact component={Album} />
         </Switch>
         <Footer />
       </div>

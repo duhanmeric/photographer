@@ -884,9 +884,25 @@ footer .author {
     max-width: 350px !important;
     width: 100% !important;
   }
-  .phone-container p {
+  .phone-container .phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .phone-container .phone p {
     position: static !important;
     text-align: center;
+    font-size: 28px !important;
   }
   .email-container {
     position: static !important;
@@ -894,8 +910,24 @@ footer .author {
     width: 100% !important;
     text-align: center;
   }
-  .email-container a {
+  .email-container .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .email-container .email a {
     position: static !important;
+    font-size: 28px !important;
   }
   .address-container {
     position: static !important;
@@ -933,15 +965,170 @@ footer .author {
   }
 }
 
+@media screen and (min-height: 1024px) {
+  .contact-section {
+    height: 100vh;
+    margin-bottom: 0;
+  }
+}
+
+.album-section {
+  margin-top: 100px;
+  padding: 0 100px;
+  height: 100%;
+}
+
+.album-content {
+  height: 100%;
+  position: relative;
+  padding-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prev i,
+.next i {
+  font-size: 52px;
+  color: #000;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  margin-bottom: 132px;
+}
+
+.album-wrapper {
+  max-width: 700px;
+  max-height: 550px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.album-wrapper img {
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.album-wrapper img.queue {
+  visibility: hidden;
+  z-index: 1;
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+  position: absolute;
+}
+
+.index {
+  position: absolute;
+  right: 0;
+  bottom: 150px;
+  font-size: 52px;
+}
+
+.index .showing {
+  color: #dd2121;
+}
+
+.index .allImageLength {
+  font-size: 42px;
+}
+
+.album-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+  .album-section {
+    padding: 0 20px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .album-section {
+    padding: 0 40px;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 3;
+    margin-bottom: 0;
+  }
+  .prev i,
+  .next i {
+    font-size: 42px;
+  }
+  .prev {
+    left: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .next {
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .album-content {
+    padding-bottom: 0;
+    height: 100%;
+  }
+  .index {
+    display: none;
+  }
+  .album-wrapper {
+    max-height: 500px;
+    height: 100%;
+  }
+  .album-wrapper img {
+    max-height: 500px;
+    height: 100%;
+    position: absolute;
+  }
+  .album-wrapper img.queue {
+    visibility: hidden;
+    z-index: 1;
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+}
+
 * {
   font-family: "Space Mono", monospace;
 }
 
-html {
+html,
+body,
+#root,
+.App,
+.App > div {
   height: 100%;
-}
-
-body {
-  min-height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

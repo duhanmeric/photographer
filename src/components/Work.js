@@ -10,25 +10,25 @@ export default function Works() {
       id: 0,
       title: "Pinky",
       url: pink,
-      album: "#",
+      album: "/pinky",
     },
     {
       id: 1,
       title: "Jungle",
       url: jungle,
-      album: "#",
+      album: "/jungle",
     },
     {
       id: 2,
       title: "Record",
       url: record,
-      album: "#",
+      album: "/record",
     },
     {
       id: 3,
       title: "Racism",
       url: racism,
-      album: "#",
+      album: "/racism",
     },
   ];
   return (
