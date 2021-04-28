@@ -1,86 +1,51 @@
 import pinky from "../assets/pink.jpg";
 import prize4 from "../assets/albums/prize4.jpg";
 import jungle from "../assets/jungle.jpg";
+import racism from "../assets/racism.jpg";
+import own from "../assets/own.jpg";
+import pro from "../assets/pro.jpg";
+import record from "../assets/record.jpg";
+import studio from "../assets/studio.jpg";
 import { React, useRef, useEffect, useState } from "react";
 
 export default function Album() {
-  const pink = [
-    {
-      id: 0,
-      title: "example 1",
-      url: pinky,
-    },
-    {
-      id: 1,
-      title: "example 2",
-      url: prize4,
-    },
-    {
-      id: 2,
-      title: "example 3",
-      url: jungle,
-    },
-  ];
-
-  let slideRef = useRef([]);
-
-  const [showingImage, setShowingImage] = useState(0);
-  const [allImagesLength, setAllImagesLength] = useState();
-
-  useEffect(() => {
-    setAllImagesLength(slideRef.current.length);
-    slideRef.current.forEach((singleImage, index) => {
-      if (index !== showingImage) {
-        singleImage.classList.add("queue");
-      } else {
-        setTimeout(() => {
-          singleImage.classList.remove("queue");
-        }, 700);
-      }
-    });
-  }, [showingImage]);
-
-  const handleChange = (type) => {
-    if (type === "next") {
-      if (showingImage >= slideRef.current.length - 1) {
-        return;
-      }
-      setShowingImage(showingImage + 1);
-    } else {
-      if (showingImage <= 0) {
-        return;
-      }
-      setShowingImage(showingImage - 1);
-    }
-  };
-
   return (
     <section className="album-section">
-      <div className="album-content">
-        <div className="prev" onClick={() => handleChange("prev")}>
-          <i className="fas fa-chevron-left"></i>
+      <h1 className="album-title text-center mb-4">Pink</h1>
+      <div className="row mx-0 album-row">
+        <div className="col-md-4 album-col p-0">
+          <div className="album-img small">
+            <img src={pinky} alt="" />
+          </div>
+          <div className="album-img big">
+            <img src={prize4} alt="" />
+          </div>
+          <div className="album-img small">
+            <img src={jungle} alt="" />
+          </div>
         </div>
-
-        <div className="album-wrapper">
-          {pink.map((singleItem, index) => (
-            <div key={singleItem.id}>
-              <img
-                src={singleItem.url}
-                alt={singleItem.title}
-                ref={(element) => (slideRef.current[index] = element)}
-              />
-            </div>
-          ))}
+        <div className="col-md-4 album-col">
+          <div className="album-img small">
+            <img src={racism} alt="" />
+          </div>
+          <div className="album-img small">
+            <img src={own} alt="" />
+          </div>
+          <div className="album-img big">
+            <img src={pro} alt="" />
+          </div>
         </div>
-
-        <div className="next" onClick={() => handleChange("next")}>
-          <i className="fas fa-chevron-right"></i>
+        <div className="col-md-4 album-col p-0">
+          <div className="album-img big">
+            <img src={record} alt="" />
+          </div>
+          <div className="album-img small">
+            <img src={studio} alt="" />
+          </div>
+          <div className="album-img small">
+            <img src={pinky} alt="" />
+          </div>
         </div>
-        <div className="index">
-          <span className="showing">0{showingImage + 1}</span>/
-          <span className="allImageLength">0{allImagesLength}</span>
-        </div>
-        <div className="album-title">pink</div>
       </div>
     </section>
   );
