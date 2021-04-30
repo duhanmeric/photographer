@@ -8,25 +8,25 @@ export default function Works() {
   const works = [
     {
       id: 0,
-      title: "Pinky",
+      title: "pinky girl",
       url: pink,
       album: "/pinky",
     },
     {
       id: 1,
-      title: "Jungle",
+      title: "independent",
       url: jungle,
       album: "/jungle",
     },
     {
       id: 2,
-      title: "Record",
+      title: "record",
       url: record,
       album: "/record",
     },
     {
       id: 3,
-      title: "Racism",
+      title: "two souls",
       url: racism,
       album: "/racism",
     },
@@ -41,7 +41,6 @@ export default function Works() {
           <div className="img-wrapper">
             <Link to={work.album} className="pop-up">
               SEE THE
-              <span></span>
               <span className="album-text" style={{ fontWeight: "bold" }}>
                 ALBUM
               </span>

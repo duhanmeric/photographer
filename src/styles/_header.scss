@@ -132,6 +132,12 @@ header {
         opacity: 1;
       }
     }
+    &.sticky {
+      border: none;
+    }
+    &.sticky .opened {
+      top: 70px;
+    }
   }
 
   header.sticky nav {

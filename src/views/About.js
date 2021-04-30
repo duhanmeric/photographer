@@ -1,11 +1,57 @@
-import AboutContent from "../components/AboutContent";
-import AboutSelect from "../components/AboutSelect";
+import about from "../assets/about.jpg";
+import xd from "../assets/xd.jpg";
+import bulk from "../assets/bulk.svg";
+import girl from "../assets/girl.mp4";
 
 export default function About() {
   return (
     <>
-      {/* <AboutSelect /> */}
-      <AboutContent />
+      <section className="about-hero">
+        <div className="about-container">
+          <video src={girl} autoPlay loop muted className="about-video"></video>
+          <div className="about-info">
+            <h1 className="about-title mb-4 text-center">
+              I am <span style={{ fontWeight: "bold" }}>John Doe</span>
+            </h1>
+            <h5 className="about-subtitle text-center w-75 mx-auto">
+              A professional photographer who is adventurer, rationalist and
+              dilligent.
+              <br />
+              Living in germany ✌️.
+            </h5>
+          </div>
+        </div>
+      </section>
+      <section className="about-section">
+        <h2 className="whoami-title">Okay but who am i really?</h2>
+        <p className="whoami-text w-75 text-center mx-auto mt-5">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+          assumenda quae ut explicabo cumque sunt ipsa sit tempora hic neque,
+          aliquid reprehenderit alias perspiciatis. Eveniet explicabo molestiae
+          corporis sequi ipsa. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Temporibus assumenda quae ut explicabo cumque sunt
+          ipsa sit tempora hic neque, aliquid reprehenderit alias perspiciatis.
+          Eveniet explicabo molestiae corporis sequi ipsa.
+        </p>
+        <div className="row mx-auto">
+          <div className="col-md-2 scale-col p-0">
+            <div className="count">3000+</div>
+            <div className="desc">photograps</div>
+          </div>
+          <div className="col-md-2 scale-col p-0">
+            <div className="count">12</div>
+            <div className="desc">staff</div>
+          </div>
+          <div className="col-md-2 scale-col p-0">
+            <div className="count">2</div>
+            <div className="desc">offices</div>
+          </div>
+          <div className="col-md-2 scale-col p-0">
+            <div className="count">1000+</div>
+            <div className="desc">happy clients</div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
