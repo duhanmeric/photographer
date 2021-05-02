@@ -35,6 +35,7 @@
       position: absolute;
       top: 50%;
       left: -85%;
+      transition: left 0.3s ease;
       .email {
         position: relative;
         height: 100%;
@@ -51,6 +52,7 @@
       position: absolute;
       top: 25%;
       right: -85%;
+      transition: right 0.3s ease;
       .phone {
         position: relative;
         height: 100%;
@@ -68,6 +70,7 @@
       bottom: -4%;
       right: -40%;
       width: 400px;
+      transition: right 0.3s ease;
       .address {
         position: relative;
         height: 100%;

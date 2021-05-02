@@ -815,6 +815,8 @@ footer .author {
   position: absolute;
   top: 50%;
   left: -85%;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
 }
 
 .contact-section .wrapper .email-container .email {
@@ -834,6 +836,8 @@ footer .author {
   position: absolute;
   top: 25%;
   right: -85%;
+  -webkit-transition: right 0.3s ease;
+  transition: right 0.3s ease;
 }
 
 .contact-section .wrapper .phone-container .phone {
@@ -854,6 +858,8 @@ footer .author {
   bottom: -4%;
   right: -40%;
   width: 400px;
+  -webkit-transition: right 0.3s ease;
+  transition: right 0.3s ease;
 }
 
 .contact-section .wrapper .address-container .address {
