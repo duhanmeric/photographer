@@ -44,7 +44,7 @@ export default function Contact() {
           ref={(el) => (redRefs.current[0] = el)}
         >
           <div className="email">
-            <a href="#">johndoe@info.com</a>
+            <a href="mailto:johndoe@info.com">johndoe@info.com</a>
           </div>
         </div>
         <div

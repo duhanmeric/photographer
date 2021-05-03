@@ -11,9 +11,8 @@
     position: relative;
     .img-container {
       padding: 0 100px;
-      width: 100%;
       height: calc(100vh - 150px);
-      transition: all 0.7s ease;
+      transition: all 1s ease;
       position: absolute;
       overflow: hidden;
       img {
@@ -22,7 +21,6 @@
         object-fit: cover;
       }
       &.queue {
-        width: 0;
         visibility: hidden;
         opacity: 0;
         transform: translateX(-120%);

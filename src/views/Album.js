@@ -7,12 +7,14 @@ import pro from "../assets/pro.jpg";
 import record from "../assets/record.jpg";
 import studio from "../assets/studio.jpg";
 import { useRef, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Album() {
   const [showingImage, setShowingImage] = useState(0);
   const albumRef = useRef([]);
   const [allImages, setAllImages] = useState(null);
+
+  let { id } = useParams();
 
   useEffect(() => {
     albumRef.current.forEach((albumImage, index) => {
@@ -41,9 +43,10 @@ export default function Album() {
   }, [showingImage]);
 
   useEffect(() => {
+    const allAlbum = albumRef.current;
     changeAllImages();
     return () => {
-      setAllImages(albumRef.current.length);
+      setAllImages(allAlbum.length);
     };
   }, []);
 
@@ -51,7 +54,7 @@ export default function Album() {
     setAllImages(albumRef.current.length);
   };
 
-  const album = [
+  const albumPinky = [
     {
       id: 0,
       title: "studio",
@@ -68,10 +71,41 @@ export default function Album() {
       url: racism,
     },
   ];
+
+  const albumIndependent = [
+    {
+      id: 0,
+      title: "own",
+      url: own,
+    },
+    {
+      id: 1,
+      title: "pro",
+      url: pro,
+    },
+    {
+      id: 2,
+      title: "record",
+      url: record,
+    },
+  ];
+
+  const handleFilter = () => {
+    switch (id) {
+      case "pinky":
+        return albumPinky;
+      case "jungle":
+        return albumIndependent;
+      default:
+        return "xd";
+        break;
+    }
+  };
+
   return (
     <section className="album-section">
       <div className="position-container">
-        {album.map((albumImage, index) => (
+        {handleFilter().map((albumImage, index) => (
           <div
             className="img-container"
             key={albumImage.id}
@@ -87,7 +121,7 @@ export default function Album() {
           <i className="fas fa-level-down-alt"></i>
         </Link>
       </div>
-      <div className="album-title">pink</div>
+      <div className="album-title">{id}</div>
       <div className="index">
         <span className="current-index">0{showingImage + 1}/</span>
         <span className="total-index">

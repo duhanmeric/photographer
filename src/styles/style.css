@@ -995,10 +995,9 @@ footer .author {
 
 .album-section .position-container .img-container {
   padding: 0 100px;
-  width: 100%;
   height: calc(100vh - 150px);
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   position: absolute;
   overflow: hidden;
 }
@@ -1011,7 +1010,6 @@ footer .author {
 }
 
 .album-section .position-container .img-container.queue {
-  width: 0;
   visibility: hidden;
   opacity: 0;
   -webkit-transform: translateX(-120%);

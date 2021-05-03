@@ -1,8 +1,4 @@
-import about from "../assets/about.jpg";
-import xd from "../assets/xd.jpg";
-import bulk from "../assets/bulk.svg";
 import girl from "../assets/girl.mp4";
-
 export default function About() {
   return (
     <>
