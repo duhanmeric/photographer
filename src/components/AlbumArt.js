@@ -2,6 +2,7 @@ import a1 from "../assets/art/a1.jpg";
 import a2 from "../assets/art/a2.jpg";
 import a3 from "../assets/art/a3.jpg";
 import a4 from "../assets/art/a4.jpg";
+import a5 from "../assets/art/a5.jpg";
 
 const albumArt = [
   {
@@ -23,6 +24,11 @@ const albumArt = [
     id: 3,
     title: "a4",
     url: a4,
+  },
+  {
+    id: 4,
+    title: "a5",
+    url: a5,
   },
 ];
 
