@@ -1,7 +1,7 @@
-import pink from "../assets/pink.jpg";
-import jungle from "../assets/jungle.jpg";
 import record from "../assets/record.jpg";
 import racism from "../assets/racism.jpg";
+import p0 from "../assets/pinky/p0.jpg";
+import l0 from "../assets/landscape/l0.jpg";
 import { Link } from "react-router-dom";
 
 export default function Works() {
@@ -9,14 +9,14 @@ export default function Works() {
     {
       id: 0,
       title: "pinky girl",
-      url: pink,
+      url: p0,
       album: "/pinky",
     },
     {
       id: 1,
-      title: "independent",
-      url: jungle,
-      album: "/jungle",
+      title: "landscape",
+      url: l0,
+      album: "/landscape",
     },
     {
       id: 2,

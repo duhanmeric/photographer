@@ -1,11 +1,14 @@
-import pinky from "../assets/pink.jpg";
-import prize4 from "../assets/albums/prize4.jpg";
-import jungle from "../assets/jungle.jpg";
-import racism from "../assets/racism.jpg";
-import own from "../assets/own.jpg";
-import pro from "../assets/pro.jpg";
-import record from "../assets/record.jpg";
-import studio from "../assets/studio.jpg";
+import p1 from "../assets/pinky/p1.jpg";
+import p2 from "../assets/pinky/p2.jpg";
+import p3 from "../assets/pinky/p3.jpg";
+import p4 from "../assets/pinky/p4.jpg";
+// import l0 from "../assets/landscape/l0.jpg";
+import l1 from "../assets/landscape/l1.jpg";
+import l2 from "../assets/landscape/l2.jpg";
+import l3 from "../assets/landscape/l3.jpg";
+import l4 from "../assets/landscape/l4.jpg";
+import l5 from "../assets/landscape/l5.jpg";
+import l6 from "../assets/landscape/l6.jpg";
 import { useRef, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -29,7 +32,7 @@ export default function Album() {
   useEffect(() => {
     window.addEventListener("click", (e) => {
       if (e.clientX >= window.innerWidth / 2) {
-        if (showingImage >= 2) {
+        if (showingImage >= albumRef.current.length - 1) {
           return;
         }
         setShowingImage(showingImage + 1);
@@ -57,36 +60,56 @@ export default function Album() {
   const albumPinky = [
     {
       id: 0,
-      title: "studio",
-      url: studio,
+      title: "p1",
+      url: p1,
     },
     {
       id: 1,
-      title: "pinky",
-      url: pinky,
+      title: "p2",
+      url: p2,
     },
     {
       id: 2,
-      title: "racism",
-      url: racism,
+      title: "p3",
+      url: p3,
+    },
+    {
+      id: 3,
+      title: "p4",
+      url: p4,
     },
   ];
 
-  const albumIndependent = [
+  const albumLandscape = [
     {
       id: 0,
-      title: "own",
-      url: own,
+      title: "l1",
+      url: l1,
     },
     {
       id: 1,
-      title: "pro",
-      url: pro,
+      title: "l2",
+      url: l2,
     },
     {
       id: 2,
-      title: "record",
-      url: record,
+      title: "l3",
+      url: l3,
+    },
+    {
+      id: 3,
+      title: "l4",
+      url: l4,
+    },
+    {
+      id: 4,
+      title: "l5",
+      url: l5,
+    },
+    {
+      id: 5,
+      title: "l6",
+      url: l6,
     },
   ];
 
@@ -94,10 +117,10 @@ export default function Album() {
     switch (id) {
       case "pinky":
         return albumPinky;
-      case "jungle":
-        return albumIndependent;
+      case "landscape":
+        return albumLandscape;
       default:
-        return "xd";
+        return "ddd";
         break;
     }
   };
