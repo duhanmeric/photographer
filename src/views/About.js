@@ -1,10 +1,16 @@
-import girl from "../assets/girl.mp4";
+import about from "../assets/about.mp4";
 export default function About() {
   return (
     <>
       <section className="about-hero">
         <div className="about-container">
-          <video src={girl} autoPlay loop muted className="about-video"></video>
+          <video
+            src={about}
+            autoPlay
+            loop
+            muted
+            className="about-video"
+          ></video>
           <div className="about-info">
             <h1 className="about-title mb-4 text-center">
               I am <span style={{ fontWeight: "bold" }}>John Doe</span>
@@ -13,7 +19,7 @@ export default function About() {
               A professional photographer who is adventurer, rationalist and
               dilligent.
               <br />
-              Living in germany ✌️.
+              Living in Germany ✌️.
             </h5>
           </div>
         </div>
