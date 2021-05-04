@@ -104,9 +104,14 @@ header nav ul a::after {
   width: 0%;
   height: 4px;
   display: block;
-  background-color: #dd2121;
+  background-color: #000;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
+}
+
+header nav ul a.active::after {
+  width: 100%;
+  background-color: #dd2121;
 }
 
 @media screen and (max-width: 576px) {

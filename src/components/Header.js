@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useRef, useEffect } from "react";
 
 export default function Header() {
@@ -6,6 +6,25 @@ export default function Header() {
   const navRef = useRef();
   const firstLine = useRef();
   const secondLine = useRef();
+  const navLinkRefs = useRef([]);
+
+  const navLinks = [
+    {
+      id: 0,
+      title: "home",
+      destination: "/",
+    },
+    {
+      id: 1,
+      title: "about",
+      destination: "/about",
+    },
+    {
+      id: 2,
+      title: "contact",
+      destination: "/contact",
+    },
+  ];
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,9 +40,9 @@ export default function Header() {
 
   return (
     <header className="fixed-top" ref={headerRef}>
-      <Link to="/" id="logo">
+      <NavLink to="/" id="logo">
         <p className="mb-0">J&D</p>
-      </Link>
+      </NavLink>
 
       <div className="bar" onClick={() => handleNav()}>
         <div className="first-line" ref={firstLine}></div>
@@ -31,15 +50,18 @@ export default function Header() {
       </div>
       <nav ref={navRef}>
         <ul className="list-unstyled">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+          {navLinks.map((navLink, index) => (
+            <li key={navLink.id}>
+              <NavLink
+                exact
+                to={navLink.destination}
+                activeClassName="active"
+                ref={(el) => (navLinkRefs.current[index] = el)}
+              >
+                {navLink.title}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
