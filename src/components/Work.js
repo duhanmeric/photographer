@@ -1,7 +1,7 @@
-import record from "../assets/record.jpg";
-import racism from "../assets/racism.jpg";
 import p0 from "../assets/pinky/p0.jpg";
 import l0 from "../assets/landscape/l0.jpg";
+import a0 from "../assets/art/a0.jpg";
+import r0 from "../assets/remote/r0.jpg";
 import { Link } from "react-router-dom";
 
 export default function Works() {
@@ -20,15 +20,15 @@ export default function Works() {
     },
     {
       id: 2,
-      title: "record",
-      url: record,
-      album: "/record",
+      title: "art",
+      url: a0,
+      album: "/art",
     },
     {
       id: 3,
-      title: "two souls",
-      url: racism,
-      album: "/racism",
+      title: "remote",
+      url: r0,
+      album: "/remote",
     },
   ];
   return (

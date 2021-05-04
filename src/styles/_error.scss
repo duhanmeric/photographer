@@ -1,0 +1,31 @@
+@import "./func";
+
+.error-section {
+  margin-top: 100px;
+  text-align: center;
+  height: calc(100vh - 100px);
+  @include flexItems(column, center);
+  .error-wrapper {
+    margin-bottom: 100px;
+    .error-title {
+      font-size: 52px;
+      line-height: 120%;
+    }
+    .error-code {
+      font-size: 128px;
+      .zero {
+        color: $primary;
+      }
+    }
+    .back-btn {
+      max-width: 300px;
+      width: 100%;
+      height: 50px;
+      outline: none;
+      border: none;
+      background-color: $primary;
+      color: $third;
+      font-size: 24px;
+    }
+  }
+}

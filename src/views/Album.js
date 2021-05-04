@@ -1,16 +1,11 @@
-import p1 from "../assets/pinky/p1.jpg";
-import p2 from "../assets/pinky/p2.jpg";
-import p3 from "../assets/pinky/p3.jpg";
-import p4 from "../assets/pinky/p4.jpg";
-// import l0 from "../assets/landscape/l0.jpg";
-import l1 from "../assets/landscape/l1.jpg";
-import l2 from "../assets/landscape/l2.jpg";
-import l3 from "../assets/landscape/l3.jpg";
-import l4 from "../assets/landscape/l4.jpg";
-import l5 from "../assets/landscape/l5.jpg";
-import l6 from "../assets/landscape/l6.jpg";
+import AlbumPinky from "../components/AlbumPinky";
+import AlbumLandscape from "../components/AlbumLandscape";
+import AlbumArt from "../components/AlbumArt";
+import AlbumRemote from "../components/AlbumRemote";
+
 import { useRef, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import NotExist from "./NotExist";
 
 export default function Album() {
   const [showingImage, setShowingImage] = useState(0);
@@ -57,100 +52,53 @@ export default function Album() {
     setAllImages(albumRef.current.length);
   };
 
-  const albumPinky = [
-    {
-      id: 0,
-      title: "p1",
-      url: p1,
-    },
-    {
-      id: 1,
-      title: "p2",
-      url: p2,
-    },
-    {
-      id: 2,
-      title: "p3",
-      url: p3,
-    },
-    {
-      id: 3,
-      title: "p4",
-      url: p4,
-    },
-  ];
-
-  const albumLandscape = [
-    {
-      id: 0,
-      title: "l1",
-      url: l1,
-    },
-    {
-      id: 1,
-      title: "l2",
-      url: l2,
-    },
-    {
-      id: 2,
-      title: "l3",
-      url: l3,
-    },
-    {
-      id: 3,
-      title: "l4",
-      url: l4,
-    },
-    {
-      id: 4,
-      title: "l5",
-      url: l5,
-    },
-    {
-      id: 5,
-      title: "l6",
-      url: l6,
-    },
-  ];
-
   const handleFilter = () => {
     switch (id) {
       case "pinky":
-        return albumPinky;
+        return AlbumPinky;
       case "landscape":
-        return albumLandscape;
+        return AlbumLandscape;
+      case "art":
+        return AlbumArt;
+      case "remote":
+        return AlbumRemote;
       default:
-        return "ddd";
-        break;
+        return null;
     }
   };
 
   return (
-    <section className="album-section">
-      <div className="position-container">
-        {handleFilter().map((albumImage, index) => (
-          <div
-            className="img-container"
-            key={albumImage.id}
-            ref={(el) => (albumRef.current[index] = el)}
-          >
-            <img src={albumImage.url} alt={albumImage.title} />
+    <>
+      {handleFilter() ? (
+        <section className="album-section">
+          <div className="position-container">
+            {handleFilter().map((albumImage, index) => (
+              <div
+                className="img-container"
+                key={albumImage.id}
+                ref={(el) => (albumRef.current[index] = el)}
+              >
+                <img src={albumImage.url} alt={albumImage.title} />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <div className="back-icon">
-        <Link to="/">
-          <i className="fas fa-level-down-alt"></i>
-        </Link>
-      </div>
-      <div className="album-title">{id}</div>
-      <div className="index">
-        <span className="current-index">0{showingImage + 1}/</span>
-        <span className="total-index">
-          {allImages >= 10 ? allImages : "0" + allImages}
-        </span>
-      </div>
-    </section>
+          <div className="back-icon">
+            <Link to="/">
+              <i className="fas fa-level-down-alt"></i>
+            </Link>
+          </div>
+          <div className="album-title">{id}</div>
+          <div className="index">
+            <span className="current-index">0{showingImage + 1}/</span>
+            <span className="total-index">
+              {allImages >= 10 ? allImages : "0" + allImages}
+            </span>
+          </div>
+        </section>
+      ) : (
+        <NotExist />
+      )}
+    </>
   );
 }

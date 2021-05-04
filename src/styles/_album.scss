@@ -18,7 +18,7 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
       &.queue {
         visibility: hidden;
@@ -76,6 +76,9 @@
     .position-container,
     .img-container {
       padding: 0 !important;
+      img {
+        object-fit: cover !important;
+      }
     }
   }
 
