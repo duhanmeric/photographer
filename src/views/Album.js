@@ -5,7 +5,7 @@ import AlbumRemote from "../components/AlbumRemote";
 
 import { useRef, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import NotExist from "./NotExist";
+// import NotExist from "./NotExist";
 
 export default function Album() {
   const [showingImage, setShowingImage] = useState(0);
