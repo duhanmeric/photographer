@@ -29,9 +29,11 @@ export default function Hero() {
         <div className="ball"></div>
         <span className="rec-text">REC</span>
       </div>
-      <h4 className="photographer-name">JOHN DOE</h4>
-      <img src={about} className="p-img" alt="p-img" />
-      <p className="hero-info mb-0">
+      <h4 className="photographer-name" data-aos="fade-up">
+        JOHN DOE
+      </h4>
+      <img src={about} className="p-img" alt="p-img" data-aos="fade-up" />
+      <p className="hero-info mb-0" data-aos="fade-up">
         PHOTOGRAPH <span style={{ fontWeight: "bold" }}>ENTHUSIAST</span> <br />
         AT AMSTERDAM
       </p>
