@@ -3,8 +3,15 @@ import l0 from "../assets/landscape/l0.jpg";
 import a0 from "../assets/art/a0.jpg";
 import r0 from "../assets/remote/r0.jpg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Works() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const works = [
     {
       id: 0,
@@ -37,7 +44,7 @@ export default function Works() {
         SELECTED <span style={{ fontWeight: "bold" }}>WORKS</span>
       </h1>
       {works.map((work) => (
-        <div className="row mx-auto p-0" key={work.id}>
+        <div className="row mx-auto p-0" key={work.id} data-aos="fade-up">
           <div className="img-wrapper">
             <Link to={work.album} className="pop-up">
               SEE THE

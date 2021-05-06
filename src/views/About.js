@@ -1,8 +1,16 @@
 import about from "../assets/about.mp4";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function About() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
-      <section className="about-hero">
+      <section className="about-hero" data-aos="fade-in">
         <div className="about-container">
           <video
             src={about}
@@ -24,8 +32,10 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="about-section">
-        <h2 className="whoami-title">Okay but who am i really?</h2>
+      <section className="about-section" data-aos="fade-up">
+        <h2 className="whoami-title">
+          Okay but who am i really? (fictional character)
+        </h2>
         <p className="whoami-text w-75 text-center mx-auto mt-5">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
           assumenda quae ut explicabo cumque sunt ipsa sit tempora hic neque,

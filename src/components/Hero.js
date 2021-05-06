@@ -1,5 +1,7 @@
 import about from "../assets/about.jpg";
 import { useEffect, useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Hero() {
   const [time, setTime] = useState(0);
@@ -12,8 +14,13 @@ export default function Hero() {
       clearInterval(interval);
     };
   }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <section className="hero-section text-center">
+    <section className="hero-section text-center" data-aos="fade-in">
       <div className="top-left-frame">
         <div className="first-frame"></div>
         <div className="second-frame"></div>
