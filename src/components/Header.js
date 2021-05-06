@@ -33,7 +33,6 @@ export default function Header() {
   }, []);
 
   const handleNavClick = () => {
-    console.log("23");
     navRef.current.classList.remove("opened");
     firstLine.current.classList.remove("f-rotated");
     secondLine.current.classList.remove("s-rotated");

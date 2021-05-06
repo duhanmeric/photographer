@@ -96,9 +96,7 @@ export default function Album() {
             </span>
           </div>
         </section>
-      ) : (
-        <NotExist />
-      )}
+      ) : null}
     </>
   );
 }
