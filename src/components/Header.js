@@ -32,6 +32,13 @@ export default function Header() {
     });
   }, []);
 
+  const handleNavClick = () => {
+    console.log("23");
+    navRef.current.classList.remove("opened");
+    firstLine.current.classList.remove("f-rotated");
+    secondLine.current.classList.remove("s-rotated");
+  };
+
   const handleNav = () => {
     navRef.current.classList.toggle("opened");
     firstLine.current.classList.toggle("f-rotated");
@@ -57,6 +64,9 @@ export default function Header() {
                 to={navLink.destination}
                 activeClassName="active"
                 ref={(el) => (navLinkRefs.current[index] = el)}
+                onClick={() => {
+                  handleNavClick();
+                }}
               >
                 {navLink.title}
               </NavLink>

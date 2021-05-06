@@ -1,11 +1,14 @@
 import about from "../assets/about.mp4";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function About() {
+  const videoRef = useRef();
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
+    videoRef.current.controls = false;
   }, []);
 
   return (
@@ -18,6 +21,8 @@ export default function About() {
             loop
             muted
             className="about-video"
+            ref={videoRef}
+            playsInline
           ></video>
           <div className="about-info">
             <h1 className="about-title mb-4 text-center">
